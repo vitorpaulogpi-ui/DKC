@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Donkey Kong Country - Web Player</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Donkey Kong Country - Web</title>
     <style>
         html, body {
             margin: 0;
@@ -26,28 +26,28 @@
         <div id="game"></div>
     </div>
 
-    <!-- Carrega o script do EmulatorJS vindo de uma CDN confiável -->
-    <script src="https://jsdelivr.net"></script>
     <script>
-        // Configurações do emulador
+        // Configurações Globais do Emulador
         EJS_player = '#game';
-        EJS_core = 'snes'; // Define o sistema como Super Nintendo
+        EJS_core = 'snes'; // Sistema: Super Nintendo
         EJS_gameName = 'Donkey Kong Country';
-        EJS_color = '#006400'; // Cor temática (verde)
+        EJS_color = '#006400';
         EJS_startOnLoaded = true;
         
-        // Caminho para o seu arquivo de jogo no repositório
+        // Aponta para o arquivo DKC.smc que está na raiz do seu GitHub
         EJS_gameUrl = 'DKC.smc'; 
         
-        // Caminho para os arquivos de sistema do emulador (carregados via CDN)
-        EJS_pathtodata = 'https://jsdelivr.net';
+        // IMPORTANTE: Nova CDN oficial e estável do projeto EmulatorJS
+        EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
 
-        // Configuração específica para melhor usabilidade no celular
+        // Configuração otimizada para Celulares (Touch Screen)
         EJS_VirtualGamepadSettings = {
-            touchControls: true // Ativa os botões virtuais na tela para celular
+            touchControls: true
         };
     </script>
-    <script src="https://jsdelivr.netloader.js"></script>
+    
+    <!-- Script carregador oficial -->
+    <script src="https://emulatorjs.org"></script>
 
 </body>
 </html>
